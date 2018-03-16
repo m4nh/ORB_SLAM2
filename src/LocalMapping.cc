@@ -644,7 +644,7 @@ void LocalMapping::KeyFrameCulling()
             continue;
         const vector<MapPoint*> vpMapPoints = pKF->GetMapPointMatches();
 
-        int nObs = 3;
+        int nObs = 10;
         const int thObs=nObs;
         int nRedundantObservations=0;
         int nMPs=0;
@@ -690,7 +690,7 @@ void LocalMapping::KeyFrameCulling()
             }
         }  
 
-        if(nRedundantObservations>0.9*nMPs)
+        if(nRedundantObservations>0.98*nMPs)
             pKF->SetBadFlag();
     }
 }

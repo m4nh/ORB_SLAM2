@@ -311,12 +311,14 @@ void System::Shutdown()
 
     // Wait until all thread have effectively stopped
     while(!mpLocalMapper->isFinished() || !mpLoopCloser->isFinished() || mpLoopCloser->isRunningGBA())
-    {
+    {   
+        printf("NOT FINISHED YET!\n");
         usleep(5000);
     }
+    printf("END!\n");
 
-    if(mpViewer)
-        pangolin::BindToContext("ORB-SLAM2: Map Viewer");
+    // if(mpViewer)
+    //     pangolin::BindToContext("ORB-SLAM2: Map Viewer");
 }
 
 void System::SaveTrajectoryTUM(const string &filename)
@@ -379,6 +381,11 @@ void System::SaveTrajectoryTUM(const string &filename)
     cout << endl << "trajectory saved!" << endl;
 }
 
+void System::GetAllKeyframes(vector<KeyFrame*>& keyframes){
+    keyframes.clear();
+    keyframes =mpMap->GetAllKeyFrames();
+    sort(keyframes.begin(),keyframes.end(),KeyFrame::lId);
+}
 
 void System::SaveKeyFrameTrajectoryTUM(const string &filename)
 {
