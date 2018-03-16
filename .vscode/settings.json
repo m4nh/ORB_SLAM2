@@ -1,8 +1,20 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
+=======
+        "*.urdf": "html",
+        "*.xacro": "html",
+        "*.launch": "html",
+        "iomanip": "cpp",
+        "array": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "csignal": "cpp",
+>>>>>>> 6b22614f3341f40b2316975fa14ae9720145c0f5
         "cstdarg": "cpp",
         "cstddef": "cpp",
         "cstdio": "cpp",
@@ -10,7 +22,11 @@
         "cstring": "cpp",
         "ctime": "cpp",
         "cwchar": "cpp",
+<<<<<<< HEAD
         "array": "cpp",
+=======
+        "cwctype": "cpp",
+>>>>>>> 6b22614f3341f40b2316975fa14ae9720145c0f5
         "atomic": "cpp",
         "*.tcc": "cpp",
         "chrono": "cpp",
@@ -21,7 +37,10 @@
         "initializer_list": "cpp",
         "iosfwd": "cpp",
         "limits": "cpp",
+<<<<<<< HEAD
         "memory": "cpp",
+=======
+>>>>>>> 6b22614f3341f40b2316975fa14ae9720145c0f5
         "mutex": "cpp",
         "new": "cpp",
         "ratio": "cpp",
